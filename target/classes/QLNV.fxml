@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group2it81.controller.NhanVienController">
+   <top>
+      <Label alignment="CENTER" prefHeight="27.0" prefWidth="810.0" style="-fx-background-color: #FF6600;" text="Quản lý nhân viên " textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="21.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Pic/employee-portal.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="234.0" prefWidth="800.0">
+               <children>
+                  <HBox layoutX="-1.0" layoutY="-4.0" prefHeight="199.0" prefWidth="800.0">
+                     <children>
+                        <Pane prefHeight="199.0" prefWidth="527.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="23.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #FF00FF;" text="Họ" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="14.0" layoutY="54.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #FF00FF;" text="Tên" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="14.0" layoutY="87.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #FF00FF;" text="SĐT" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="14.0" layoutY="119.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #FF00FF;" text="Quê quán" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="14.0" layoutY="151.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #FF00FF;" text="Ngày sinh" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="txtHo" layoutX="132.0" layoutY="23.0" prefHeight="25.0" prefWidth="196.0" />
+                              <TextField fx:id="txtTen" layoutX="132.0" layoutY="54.0" prefHeight="25.0" prefWidth="196.0" />
+                              <TextField fx:id="txtSDT" layoutX="132.0" layoutY="87.0" prefHeight="25.0" prefWidth="196.0" />
+                              <TextField fx:id="txtqueQuan" layoutX="132.0" layoutY="119.0" prefHeight="25.0" prefWidth="196.0" />
+                              <DatePicker fx:id="txtngaySinh" layoutX="132.0" layoutY="151.0" prefHeight="25.0" prefWidth="196.0" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="199.0" prefWidth="529.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="74.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #FF00FF;" text="Nhập từ khoá" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="txtSearch" layoutX="125.0" layoutY="74.0" prefHeight="25.0" prefWidth="196.0" />
+                              <Label layoutX="14.0" layoutY="35.0" style="-fx-background-color: #FAFAD2;" text="Tìm kiếm nhân viên">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Button layoutX="250.0" layoutY="144.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#getListNhanVien" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #FF6600;" text="Tìm kiếm" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <HBox prefHeight="198.0" prefWidth="800.0">
+               <children>
+                  <Pane prefHeight="170.0" prefWidth="800.0">
+                     <children>
+                        <Label layoutX="126.0" layoutY="52.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #FF00FF;" text="Tên tài khoản" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="126.0" layoutY="83.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #FF00FF;" text="Mật khẩu" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <TextField fx:id="txtUsername" layoutX="237.0" layoutY="52.0" prefHeight="25.0" prefWidth="196.0" />
+                        <Label layoutX="14.0" layoutY="14.0" style="-fx-background-color: #FAFAD2;" text="Đăng kí tài khoản">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Button layoutX="365.0" layoutY="118.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#themNhanVien" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #FF6600;" text="Đăng kí" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Button>
+                        <PasswordField fx:id="txtPass" layoutX="237.0" layoutY="83.0" prefHeight="26.0" prefWidth="198.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <TableView fx:id="table" prefHeight="194.0" prefWidth="744.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="86.40002596378326" text="Mã nhân viên" />
+                  <TableColumn fx:id="colHo" prefWidth="133.5999984741211" text="Họ" />
+                  <TableColumn fx:id="colTen" prefWidth="61.5999755859375" text="Tên" />
+                  <TableColumn fx:id="colSDT" prefWidth="89.60003662109375" text="SĐT" />
+                  <TableColumn fx:id="colQueQuan" prefWidth="99.199951171875" text="Quê quán" />
+                  <TableColumn fx:id="colNgaySinh" prefWidth="102.39999389648438" text="Ngày sinh" />
+                  <TableColumn fx:id="colChucVu" minWidth="0.0" prefWidth="140.0" text="Chức vụ" />
+                  <TableColumn fx:id="colEdit" prefWidth="97.60009765625" text="Hành động" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Pane prefHeight="60.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="716.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #FF6600;" text="Quay lại" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="14.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#xoaNhanVien" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #FF6600;" text="Xoá" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

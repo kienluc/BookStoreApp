@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group2it81.controller.BanSachController">
+   <center>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="440.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane prefHeight="302.0" prefWidth="850.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab closable="false" text="Thông tin Khách">
+                     <content>
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                     </content>
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <HBox layoutX="14.0" layoutY="8.0" prefHeight="116.8" prefWidth="850.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Pane prefHeight="117.0" prefWidth="441.0" style="-fx-background-color: #FFCCCC;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="36.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #C0c0c0;" text="Tên">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label layoutX="14.0" layoutY="71.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #C0c0c0;" text="SĐT">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <TextField fx:id="txtCustomerName" layoutX="186.0" layoutY="36.0" prefHeight="25.0" prefWidth="225.0" />
+                                          <TextField fx:id="txtCustomerPhone" layoutX="186.0" layoutY="70.0" prefHeight="25.0" prefWidth="225.0" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="10.0" layoutY="10.0" prefHeight="117.0" prefWidth="410.0" style="-fx-background-color: #FFCCCC;" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+                <Tab closable="false" text="Tìm kiếm">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="39.0" layoutY="-17.0" prefHeight="185.0" prefWidth="850.0" style="-fx-background-color: #FFCCCC;" AnchorPane.bottomAnchor="-22.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TextField fx:id="txtSearch" layoutX="14.0" layoutY="55.0" prefHeight="31.0" prefWidth="222.0" />
+                                    <Label layoutX="14.0" layoutY="16.0" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #C0c0c0;" text="Từ khoá" />
+                                    <Label layoutX="338.0" layoutY="16.0" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #C0c0c0;" text="Kết quả" />
+                                    <Button layoutX="14.0" layoutY="98.0" mnemonicParsing="false" onAction="#search" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #FF6600;" text="Tìm kiếm" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
+                                    <TableView fx:id="tbSearch" layoutX="400.0" layoutY="2.0" prefHeight="176.0" prefWidth="452.0">
+                                      <columns>
+                                        <TableColumn fx:id="colSearchID" prefWidth="117.60000610351562" text="Mã SP" />
+                                        <TableColumn fx:id="colSearchName" prefWidth="150.4000244140625" text="Tựa sách" />
+                                          <TableColumn fx:id="colSearchCat" prefWidth="211.20001220703125" text="Thể loại" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <Pane prefHeight="350.0" prefWidth="850.0" style="-fx-background-color: #FFCCCC;">
+               <children>
+                  <TableView fx:id="table" layoutX="-1.0" layoutY="22.0" prefHeight="218.0" prefWidth="528.0">
+                     <columns>
+                        <TableColumn fx:id="colId" editable="false" prefWidth="67.99999809265137" text="Mã SP" />
+                        <TableColumn fx:id="colName" editable="false" prefWidth="82.4000015258789" text="Tựa Sách" />
+                        <TableColumn fx:id="colAuthor" editable="false" prefWidth="126.0" text="Tác giả" />
+                        <TableColumn fx:id="colBookType" prefWidth="72.0" text="Thể loại" />
+                        <TableColumn fx:id="colAmount" prefWidth="90.39993286132812" text="Số lượng" />
+                        <TableColumn fx:id="colPrice" editable="false" prefWidth="73.60003662109375" text="Giá" />
+                     </columns>
+                  </TableView>
+                  <Pane layoutX="545.0" layoutY="22.0">
+                     <children>
+                        <Label layoutX="2.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #C0c0c0;" text="Mã sản phẩm" />
+                        <TextField fx:id="txtBookId" layoutY="36.0" prefHeight="25.0" prefWidth="221.0" />
+                        <HBox layoutY="112.0" prefHeight="30.0" prefWidth="126.0">
+                           <children>
+                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#minus" prefHeight="25.0" prefWidth="25.0" text="-" />
+                              <Label fx:id="lbAmount" alignment="CENTER" prefHeight="25.0" prefWidth="66.0" text="0" />
+                              <Button mnemonicParsing="false" onAction="#plus" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </HBox>
+                        <Label layoutX="2.0" layoutY="73.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #C0c0c0;" text="Số lượng" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="1.0" layoutY="2.0" prefHeight="20.0" prefWidth="113.0" style="-fx-background-color: #C0c0c0;" text="Giỏ hàng">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="545.0" layoutY="203.0" mnemonicParsing="false" onAction="#xoaSP" style="-fx-background-color: #FF6600;" text="Xóa sp" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="612.0" layoutY="203.0" mnemonicParsing="false" onAction="#submit" style="-fx-background-color: #FF6600;" text="Thêm vào giỏ hàng" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="798.0" layoutY="203.0" mnemonicParsing="false" onAction="#clear" style="-fx-background-color: #FF6600;" text="Xoá" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <Label alignment="CENTER" prefHeight="46.0" prefWidth="866.0" style="-fx-background-color: #FF6600;" text="Nhà sách" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Pic/130304.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+   </top>
+   <bottom>
+      <HBox prefHeight="115.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="115.0" prefWidth="730.0">
+               <children>
+                  <Label layoutX="44.0" layoutY="36.0" prefHeight="37.0" prefWidth="92.0" style="-fx-background-color: #C0c0c0;" text="Tổng cộng">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbTotal" alignment="CENTER" layoutX="182.0" layoutY="37.0" prefHeight="35.0" prefWidth="221.0" style="-fx-background-color: #FFCCCC;">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="115.0" prefWidth="478.0">
+               <children>
+                  <Button layoutX="152.0" layoutY="26.0" mnemonicParsing="false" onAction="#switchToThanhToan" prefHeight="64.0" prefWidth="133.0" style="-fx-background-color: #FF6600;" text="Thanh toán" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button layoutX="29.0" layoutY="65.0" mnemonicParsing="false" onAction="#backHomePage" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #FF6600;" text="Quay lại" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button layoutX="29.0" layoutY="26.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #FF6600;" text="Huỷ phiếu" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

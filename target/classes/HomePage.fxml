@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #C0C0C0;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group2it81.controller.HomePageController">
+   <bottom>
+      <Pane prefHeight="82.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblTenNv" alignment="CENTER" layoutX="14.0" layoutY="20.0" prefHeight="42.0" prefWidth="252.0" style="-fx-background-color: #fff;" text="Tên Nhân viên">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="480.0" layoutY="24.0" mnemonicParsing="false" onAction="#logout" prefHeight="34.0" prefWidth="106.0" style="-fx-background-color: #FF6600;" text="Đăng xuất" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </bottom>
+   <center>
+      <Pane prefHeight="330.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="79.0" layoutY="41.0" mnemonicParsing="false" onAction="#banSach" prefHeight="42.0" prefWidth="442.0" style="-fx-background-color: #FF6600;" text="Bán sách" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="79.0" layoutY="101.0" mnemonicParsing="false" onAction="#quanLyKho" prefHeight="42.0" prefWidth="442.0" style="-fx-background-color: #FF6600;" text="Quản lý kho" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="79.0" layoutY="160.0" mnemonicParsing="false" onAction="#quanLyNhanVien" prefHeight="42.0" prefWidth="442.0" style="-fx-background-color: #FF6600;" text="Quản lý nhân viên" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="21.0" fitWidth="35.0" layoutX="90.0" layoutY="53.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Pic/123.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="35.0" layoutX="90.0" layoutY="112.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Pic/123.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="35.0" layoutX="90.0" layoutY="172.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Pic/123.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="79.0" layoutY="222.0" mnemonicParsing="false" onAction="#thongKe" prefHeight="42.0" prefWidth="442.0" style="-fx-background-color: #FF6600;" text="Thống kê" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="21.0" fitWidth="35.0" layoutX="90.0" layoutY="234.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Pic/123.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <Label alignment="CENTER" prefHeight="35.0" prefWidth="600.0" style="-fx-background-color: #000;" text="Menu" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
